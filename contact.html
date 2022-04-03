@@ -1,0 +1,417 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <title>The porch uganda</title>
+    <link rel="icon" type="image/x-icon" href="logo.jpg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <style>
+    .reach-us{
+    width: 80%;
+    max-width: auto;
+
+}
+#reachus-col{
+ flex-basis: 48%;
+ margin-bottom: 30px;
+}
+
+#reachus-col div{
+display: flex;
+align-items: center;
+margin-bottom: 40px;
+}
+
+</style>
+</head>
+<body>
+    <section class="header">
+    <nav> 
+        <a href="index.html"><img src="logo.jpg"></a>
+
+        
+        <div class="nav-links" id="navlinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+
+            <ul>
+                <li><a href="index.html">HOME</a></li>  
+                <li><a href="aboutus.html">ABOUT</a></li>  
+                <li><a href="projects.html">PROJECTS</a></li>  
+                <li><a href="gallery.html">GALLERY</a></li>  
+                <li><a href="blog.html">BLOG</a></li>  
+                <li><a href="contact.html">CONTACT</a></li>  
+              
+            </ul>
+        </div>
+       <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+         <div class="text-box">
+             <h1><i>THE PORCH UGANDA</i></h1>
+             <p>The porch uganda is a community based organisation started by a group of orphans who grew up on the mercy of God under a church based foundation,
+                 to help the majority of people suffering in uganda and  all its communities with different provisions afforded and solicited. </p>
+                 <a href="donate.html" class="hero-btn">donate</a>
+         </div>       
+
+    </section>
+    <section>
+        <div class="content-col" id="email-container">  
+            <form action="email.php" method="post">
+            <h3>EMAIL US</h3> 
+            <input type="text" name="name" placeholder="name" required>  
+            <input type="email" name="email" placeholder="email id" required>  
+            <input type="text" name="phone" placeholder="phone number" required>  
+           
+            <textarea name="message" rows="4" placeholder="please enquire from us about anything"></textarea>
+            <button type="submit">send</button>
+        </form >
+        </div>
+    </section>
+
+
+
+    <!......reach-us......>
+  <section class="reach-us">
+      <div class="reachus-row">
+        <div class="reachus-col">
+         <div>
+              <i class="fa fa-home"></i>
+              <span>
+                  <h5>iganga,uganda</h5>
+                  <p>Nakalama sub-county<br>william street,n0-521</p>
+              </span>
+          </div>
+          <div>
+            <i class="fa fa-phone"></i>
+            <span>
+                <h5>call us on</h5>
+                <p>+256-752-689252/+256-740590988</p>
+            </span>
+        </div>
+        <div>
+            <i class="fa fa-envelope-o"></i>
+            <span>
+                <h5>email us</h5>
+                <p>theporchuganda@gmail.com</p>
+            </span>
+        </div>
+      </div>
+      
+          <div class="reachus-col">
+              
+        </div>
+      </div> 
+    </div>
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ </body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</Section>
+<!........footer........>
+<section class="footer">
+    <h4>About Us</h4>
+    <p>We are The porch Uganda</p>
+    <div class="icons"> 
+       <i class="fa fa-facebook"></i>
+       <i class="fa fa-twitter"></i>
+       <i class="fa fa-youtube"></i>
+       <i class="fa fab fa-whatsapp"></i>
+       <i class="fa fa-instagram"></i>
+    </div>
+    <p><i class="fa far fa-copyright"></i>All rights reserved to The Porch Uganda as a licenced Community Based Organisation</p>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!.........javascript to toggle menu..........>
+
+<script>
+
+var navlinks = document.getElementById("navlinks");
+
+function showMenu(){
+    navlinks.style.right = "0";
+}
+function hideMenu(){
+    navlinks.style.right = "-200px";
+
+}
+</script>
+
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+    function sendEmail(){
+        Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "theporchuganda@gmail",
+    Password : "56308A7F7D9691D4C9371A957A98C93FC2AB",
+    To : 'theporchuganda@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "Donor enquiry",
+    Body : "Name" + document.getElementById("name").value
+       +"<br>Email" + document.getElementById("email").value
+       +"<br>Phone no: " + document.getElementById("phone").value
+       +"<br>Message " + document.getElementById("message").value
+        }).then(
+  message => alert("message sent")
+);
+    }
+</script>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
